@@ -12,6 +12,7 @@ import ItemTypes from '../types';
 
 const List = require('../../listData/viewData.json')
 
+//样式
 const style = {
 	border: '1px dashed gray',
 	backgroundColor: 'white',

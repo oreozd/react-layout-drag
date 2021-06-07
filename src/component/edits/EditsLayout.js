@@ -8,6 +8,7 @@ import FlashSaleControlEditPanel from './FlashSaleControlEditPanel'
 import AwardControlEditPanel from './AwardControlEditPanel'
 
 import {Form, Button} from 'react-bootstrap'
+import AppContext from '../../Context'
 
 const editList = require('../../listData/editData.json') //所有编辑项
 export default class EditsLayout extends Component {
@@ -35,6 +36,7 @@ export default class EditsLayout extends Component {
         const {controls, modal} = this.props
         const controlName = ['bannerControl', 'timeControl', 'couponControl', 'commidityControl', 'flashSaleControl', 'awardControl']
 		const List = window._.getControls()
+        const List = useContext(AppContext);
 		const Components = [
 			{
 				componentName: BannerControlEditPanel, //硬编码

@@ -1,3 +1,5 @@
+import React, { Component } from 'react'
+
 import {Image} from 'react-bootstrap'
 import P1 from './images/p1.jpg'
 import OperationBox from './OperationBox'

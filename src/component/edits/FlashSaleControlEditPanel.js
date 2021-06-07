@@ -24,7 +24,6 @@ export default class extends Component {
     handleChange() {
         
     }
-
     
     render() {
         return (
@@ -61,10 +60,10 @@ export default class extends Component {
                         <Form.Label>每行最多显示个数（App）: <span style={{color: 'red'}}>*</span></Form.Label>
                         <Form.Control as="select">
                             <option>请选择</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
                         </Form.Control>
                     </Form.Group>
 

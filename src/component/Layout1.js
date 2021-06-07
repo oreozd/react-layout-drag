@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import HTML5Backend from 'react-dnd-html5-backend';
 import { DragDropContextProvider } from 'react-dnd';
+// import 
 
 // import { connect } from 'react-redux'; //redux相关
 // import { createAction } from './actions'

@@ -2,12 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { DragSource } from 'react-dnd';
 
-import { Navbar, Jumbotron, Button, ButtonToolbar } from 'react-bootstrap';
+// import { connect } from 'react-redux'
+// import {addControl} from '../../action/index'
+
 
 import ItemTypes from '../types';
 
-const List = require('../../listData/viewData.json')
-
+//样式
 const style = {
 	border: '1px dashed gray',
 	backgroundColor: 'white',
@@ -28,13 +29,21 @@ const boxSource = {
 		const item = monitor.getItem();
 		const dropResult = monitor.getDropResult();
 		const didDrop = monitor.didDrop()
-
-		if (dropResult) {
-			
-		}
-
 		if (didDrop) {
-			List.push({"name": "优惠券控件", "funcIndex": 2})
+			const item = {
+				name: 'banner',
+				funcIndex: 0,
+				BannerControl: {
+					isfloor: false,
+					floorName: '', 
+					picStyle: 1, //图片展示方式，平铺和轮播形式 0是轮播，1是平铺
+					picMaxnum4Web: 1,
+					picMaxnum4App: 1,
+					backgroundColor: '',
+					bannerProperty: []
+				}
+			}
+			window._.addControl(item)
 		}
 	},
 }
@@ -47,27 +56,29 @@ const boxSource = {
 		isDragging: monitor.isDragging()
 	}),
 )
-class CouponControl extends React.Component {
+
+//使用函数式组件重构
+// const BannerControl1 = () =>  {
+	
+// }
+
+class BannerControl1 extends React.Component {
 
 	static propTypes = {
 		name: PropTypes.string.isRequired,
-		isDragging: PropTypes.bool.isRequired,
 		connectDragSource: PropTypes.func.isRequired
 	}
 
 	render() {
-		const { isDragging, connectDragSource, dropResult } = this.props
-		const { name } = this.props
-		//const opacity = isDragging ? 0.4 : 1
-		//const visibility = isDragging ? 'hidden' : 'visible' //移动起来就隐藏元素
+		console.log("this.props", this.props)
+		const { connectDragSource, name } = this.props
 
 		return connectDragSource && connectDragSource(
-				<div style={{ ...style }}>
-					{name}
-				</div>
-
-			);
+			<div style={{ ...style }}>
+				{name}
+			</div>
+		);
 	}
 }
 
-export default CouponControl;
+export default BannerControl1;

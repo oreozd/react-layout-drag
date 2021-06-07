@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component }from 'react';
 import PropTypes from 'prop-types';
 import { DragSource } from 'react-dnd';
 
@@ -117,7 +117,7 @@ const boxSource = {
 }
 
 @DragSource(
-	ItemTypes.TEST,
+	ItemTypes.BOX,
 	boxSource,
 	(connect, monitor) => ({
 		connectDragSource: connect.dragSource(),

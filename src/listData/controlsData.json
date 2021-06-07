@@ -1,10 +1,11 @@
 {
-    "bannerControlEdits": {}, 
-    "timeControlEdits": {
-        "timeText": "默认数据"
-    }, 
-    "couponControlEdits": {}, 
-    "commidityControlEdits": {},
-    "flashSaleControlEdits": {}, 
-    "awardControlEdits": {} 
+    "BannerControl": {
+        "isfloor": false,
+        "floorName": "", 
+        "picStyle": 1,
+        "picMaxnum4Web": 1,
+        "picMaxnum4App": 1,
+        "backgroundColor": "",
+        "bannerProperty": []
+    }
 }
